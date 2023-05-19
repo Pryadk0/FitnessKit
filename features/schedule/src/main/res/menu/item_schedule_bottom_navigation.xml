@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/schedule_item_calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/calsses"/>
+    <item
+        android:id="@+id/schedule_item_requestion"
+        android:enabled="true"
+        android:icon="@drawable/ic_requestion"
+        android:title="@string/requestions"/>
+    <item
+        android:id="@+id/schedule_item_add"
+        android:enabled="true"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add"/>
+    <item
+        android:id="@+id/schedule_item_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"/>
+    <item
+        android:id="@+id/schedule_item_more"
+        android:enabled="true"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more"/>
+</menu>

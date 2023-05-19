@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fitness Kit</string>
+    <string name="calsses">Занятия</string>
+    <string name="requestions">Заявки</string>
+    <string name="add">Добавить</string>
+    <string name="chat">Чат</string>
+    <string name="more">Еще</string>
+    <string name="text_view_schedule">Расписание</string>
+</resources>
