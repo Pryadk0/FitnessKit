@@ -2,11 +2,11 @@ package com.pryadko.fitnesskit.features.schedule.presentation
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.pryadko.fintesskit.core.presentation.viewmodel.ViewModelFactory
 import com.pryadko.fitnesskit.features.schedule.databinding.FragmentScheduleBinding
@@ -22,12 +22,12 @@ class ScheduleFragment : Fragment() {
     private val binding: FragmentScheduleBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
 
-    private lateinit var viewModel: ScheduleViewModel
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelFactory
     @Inject
     lateinit var lessonsListAdapter: LessonsListAdapter
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+    private lateinit var viewModel: ScheduleViewModel
+
 
     override fun onAttach(context: Context) {
         val componentDependencies: ScheduleComponentDependencies =
@@ -49,7 +49,11 @@ class ScheduleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.recyclerViewSchedule.adapter = lessonsListAdapter
+        with(binding.recyclerViewSchedule){
+            adapter = lessonsListAdapter
+            recycledViewPool.setMaxRecycledViews(LessonsListAdapter.ITEM_VIEW_TYPE_LESSON, 15)
+            recycledViewPool.setMaxRecycledViews(LessonsListAdapter.ITEM_VIEW_TYPE_LESSON_WITH_DATE, 8)
+        }
         viewModel = ViewModelProvider(this, viewModelFactory)[ScheduleViewModel::class.java]
         viewModel.lessonsListLiveData.observe(viewLifecycleOwner) {
             lessonsListAdapter.submitList(it)

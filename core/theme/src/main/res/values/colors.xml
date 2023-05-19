@@ -3,5 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bottom_navigation_background">#F7F7F7</color>
-
+    <color name="lesson_date_color">#999999</color>
 </resources>
