@@ -4,4 +4,7 @@ import com.pryadko.fitnesskit.features.schedule.ScheduleRouter
 import javax.inject.Inject
 
 class ScheduleRouterImpl @Inject constructor(): ScheduleRouter {
+
+    //TODO: Implement navigation for ScheduleFragment
+
 }

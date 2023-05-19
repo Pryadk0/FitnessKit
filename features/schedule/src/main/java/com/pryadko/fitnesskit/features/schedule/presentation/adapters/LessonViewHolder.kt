@@ -7,16 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pryadko.fitnesskit.features.schedule.databinding.ItemLessonBinding
 import com.pryadko.fitnesskit.features.schedule.domain.entities.Lesson
 
-class LessonViewHolder(val binding: ItemLessonBinding) : RecyclerView.ViewHolder(binding.root) {
+class LessonViewHolder(private val binding: ItemLessonBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(position: Int, currentList: List<Lesson>) {
+    fun bind(position: Int, currentItem: Lesson) {
         with(binding){
-            textViewColor.setBackgroundColor(Color.parseColor(currentList[position].color))
-            textViewStartTime.text = currentList[position].startTime
-            textViewEndTime.text = currentList[position].endTime
-            textViewLessonName.text = currentList[position].name
-            textViewLocation.text = currentList[position].place
-            textViewTrainerName.text = currentList[position].trainerFullName
+            textViewColor.setBackgroundColor(Color.parseColor(currentItem.color))
+            textViewStartTime.text = currentItem.startTime
+            textViewEndTime.text = currentItem.endTime
+            textViewLessonName.text = currentItem.name
+            textViewLocation.text = currentItem.place
+            textViewTrainerName.text = currentItem.trainerFullName
         }
     }
 

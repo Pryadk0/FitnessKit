@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="image_view_description_the_icon_of_trainer">The icon of trainer</string>
+    <string name="image_view_description_the_icon_of_location">The icon of location</string>
+</resources>

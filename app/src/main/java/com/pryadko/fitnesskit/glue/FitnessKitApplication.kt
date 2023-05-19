@@ -2,9 +2,9 @@ package com.pryadko.fitnesskit.glue
 
 import android.app.Application
 import com.pryadko.fitnesskit.di.ApplicationComponent
+import com.pryadko.fitnesskit.di.DaggerApplicationComponent
 import com.pryadko.fitnesskit.features.schedule.di.component.ScheduleComponentDependencies
 import com.pryadko.fitnesskit.features.schedule.di.component.ScheduleComponentDependenciesProvider
-import com.pryadko.fitnesskit.di.DaggerApplicationComponent
 
 class FitnessKitApplication : Application(),
     ScheduleComponentDependenciesProvider {

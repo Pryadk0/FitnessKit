@@ -14,9 +14,6 @@ class ScheduleDataRepositoryImpl @Inject constructor(
         onSuccess: (List<LessonDataEntity>) -> Unit,
         onError: ((error: String) -> Unit)
     ) {
-        //thread {
-            remoteDataSource.getLessonsList(onSuccess, onError)
-        //}.start()
-
+        remoteDataSource.getLessonsList(onSuccess, onError)
     }
 }
