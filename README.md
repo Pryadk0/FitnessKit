@@ -7,4 +7,4 @@ This is a mutlimodule project, which uses:
 - Retrofit2 + RxJava2 for making and handling network requests;
 - View binding from Android Jetpack.
 
-![schedule](https://github.com/Pryadk0/FitnessKit/assets/100865876/d307d94b-5367-494c-b5f1-ed89a8d49233)
+![screen](https://github.com/Pryadk0/FitnessKit/assets/100865876/178fc6a1-807c-423d-8d4a-e60ddfd3b116)
